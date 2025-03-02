@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@tailwind utilities;
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+@import url('https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css');
+
+body {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+/* استایل‌های اختصاصی برای reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* تنظیمات برای padding و margin */
+.p-8 {
+  padding: calc(var(--spacing) * 8) !important;
+}
